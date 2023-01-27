@@ -19,7 +19,6 @@ public class CatTest {
     public void setUp() throws Exception{
         Feline feline = Mockito.mock(Feline.class);
         Mockito.when(feline.eatMeat()).thenReturn(List.of("Животные", "Птицы", "Рыба"));
-        //Feline feline = new Feline();
         cat = new Cat(feline);
     }
 

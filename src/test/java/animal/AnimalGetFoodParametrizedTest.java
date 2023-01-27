@@ -1,4 +1,4 @@
-package AnimalTests;
+package animal;
 
 import com.example.Animal;
 import org.junit.Assert;
@@ -31,7 +31,7 @@ public class AnimalGetFoodParametrizedTest {
     public void getFood() {
         Animal animal = new Animal();
         try {
-            Assert.assertEquals("Диета соответствует заявленной", animal.getFood(animalKind), expected);
+            Assert.assertEquals("Диета соответствует заявленной", expected, animal.getFood(animalKind));
         } catch (Exception e) {
             throw new RuntimeException(e);
         }

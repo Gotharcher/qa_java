@@ -1,4 +1,4 @@
-package LionTests;
+package lion;
 
 import com.example.Feline;
 import com.example.Lion;
@@ -7,8 +7,6 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.mockito.Mockito;
-
-import java.util.List;
 
 @RunWith(Parameterized.class)
 public class LionManeParametrizedTest {
@@ -35,7 +33,7 @@ public class LionManeParametrizedTest {
         try {
             Lion lion = new Lion(sex, feline);
             Assert.assertEquals("У самца есть грива, у самки - нет.",
-                    lion.doesHaveMane(), expected);
+                    expected, lion.doesHaveMane());
         } catch (Exception e) {
             throw new RuntimeException(e);
         }

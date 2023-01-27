@@ -1,4 +1,4 @@
-package AnimalTests;
+package animal;
 
 import com.example.Animal;
 import org.junit.Assert;
@@ -10,7 +10,7 @@ public class AnimalPlainTest {
     public void getFamily() {
         String expected = "Существует несколько семейств: заячьи, беличьи, мышиные, кошачьи, псовые, медвежьи, куньи";
         Animal animal = new Animal();
-        Assert.assertEquals("Сравнение строки Семейств", animal.getFamily(), expected);
+        Assert.assertEquals("Сравнение строки Семейств", expected, animal.getFamily());
     }
 
     @Test
@@ -19,6 +19,6 @@ public class AnimalPlainTest {
         Animal animal = new Animal();
         Exception e = Assert.assertThrows(Exception.class, () -> animal.getFood("Всеядное"));
         Assert.assertEquals("Если вид диеты животного не подходит, выдается общая ошибка с указанным текстом.",
-                e.getMessage(), expectedMessage);
+                expectedMessage, e.getMessage());
     }
 }

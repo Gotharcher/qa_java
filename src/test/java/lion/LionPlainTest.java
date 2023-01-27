@@ -1,6 +1,5 @@
-package LionTests;
+package lion;
 
-import com.example.Animal;
 import com.example.Feline;
 import com.example.Lion;
 import org.junit.Assert;
@@ -19,7 +18,7 @@ public class LionPlainTest {
     public void setUp() throws Exception{
         feline = Mockito.mock(Feline.class);
         Mockito.when(feline.getKittens()).thenReturn(1);
-        Mockito.when(feline.eatMeat()).thenReturn(List.of("Животные", "Птицы", "Рыба"));
+        Mockito.when(feline.getFood("Хищник")).thenReturn(List.of("Животные", "Птицы", "Рыба"));
         lion = new Lion("Самец", feline);
     }
 
