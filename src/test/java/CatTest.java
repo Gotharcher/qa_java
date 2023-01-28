@@ -29,12 +29,8 @@ public class CatTest {
     }
 
     @Test
-    public void catDietCheck() {
+    public void catDietCheck() throws Exception{
         List<String> expected = List.of("Животные", "Птицы", "Рыба");
-        try {
             Assert.assertEquals("Кошка ест рацион хищника.", expected, cat.getFood());
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
     }
 }

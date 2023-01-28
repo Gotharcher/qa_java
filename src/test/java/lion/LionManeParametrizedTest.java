@@ -21,21 +21,13 @@ public class LionManeParametrizedTest {
 
     @Parameterized.Parameters
     public static Object[][] shouldHaveMane() {
-        return new Object[][]{
-                {"Самец", Boolean.TRUE},
-                {"Самка", Boolean.FALSE},
-        };
+        return new Object[][]{{"Самец", Boolean.TRUE}, {"Самка", Boolean.FALSE},};
     }
 
     @Test
-    public void doesHaveMane() {
+    public void doesHaveMane() throws Exception {
         Feline feline = Mockito.mock(Feline.class);
-        try {
-            Lion lion = new Lion(sex, feline);
-            Assert.assertEquals("У самца есть грива, у самки - нет.",
-                    expected, lion.doesHaveMane());
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
+        Lion lion = new Lion(sex, feline);
+        Assert.assertEquals("У самца есть грива, у самки - нет.", expected, lion.doesHaveMane());
     }
 }

@@ -28,13 +28,9 @@ public class AnimalGetFoodParametrizedTest {
     }
 
     @Test
-    public void getFood() {
+    public void getFood() throws Exception {
         Animal animal = new Animal();
-        try {
-            Assert.assertEquals("Диета соответствует заявленной", expected, animal.getFood(animalKind));
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
+        Assert.assertEquals("Диета соответствует заявленной", expected, animal.getFood(animalKind));
     }
 
 
