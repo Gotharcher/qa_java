@@ -13,6 +13,6 @@ public class AlexLion extends Lion{
     }
 
     public String getPlaceOfLiving(){
-        return "Нью-Йоркский зоопарк";
+        return "Нью-Йоркский зоопарк, вольер №3";
     }
 }
